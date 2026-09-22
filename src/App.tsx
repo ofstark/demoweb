@@ -2,7 +2,7 @@ import { useState, type ReactNode } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import LoadingScreen from "@/components/common/LoadingScreen";
 import PageContainer from "@/components/layout/PageContainer";
-import ProtectedRoute from "@/components/auth/ProtectedRoute";
+// import ProtectedRoute from "@/components/auth/ProtectedRoute"; // re-add when re-enabling auth
 import { AuthProvider } from "@/context/AuthContext";
 import Landing from "@/pages/Landing";
 import Login from "@/pages/Login";
@@ -15,12 +15,10 @@ import DataSources from "@/pages/DataSources";
 import SystemStatus from "@/pages/SystemStatus";
 import Settings from "@/pages/Settings";
 
+// AUTH TEMPORARILY DISABLED — wrap with <ProtectedRoute> again once
+// login is confirmed working end-to-end against the deployed backend.
 function protectedPage(el: ReactNode) {
-  return (
-    <ProtectedRoute>
-      <PageContainer>{el}</PageContainer>
-    </ProtectedRoute>
-  );
+  return <PageContainer>{el}</PageContainer>;
 }
 
 export default function App() {

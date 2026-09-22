@@ -7,20 +7,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
-
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-
   server: {
     port: 5173,
-  },
-
-  preview: {
-    host: "0.0.0.0",
-    port: Number(process.env.PORT) || 5173,
-    allowedHosts: ["demoweb-cybh.onrender.com"],
   },
 });

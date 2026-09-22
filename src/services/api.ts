@@ -4,8 +4,7 @@
  * mock data instead of calling the network. Flip it to false once the
  * FastAPI backend is running and reachable at BASE_URL.
  */
-
-export const BASE_URL = import.meta.env.VITE_API_BASE_URL ?? "http://localhost:8000/api";
+export const BASE_URL = "http://localhost:8000/api";
 
 export const USE_MOCK_DATA = false;
 
